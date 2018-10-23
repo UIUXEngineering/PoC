@@ -1,0 +1,107 @@
+@import '~@poc/theme/theming';
+@import '~@angular/material/theming';
+
+$theme: $dark-theme;
+
+$primary: map-get($theme, primary);
+$accent: map-get($theme, accent);
+$warn: map-get($theme, warn);
+$background: map-get($theme, background);
+$foreground: map-get($theme, foreground);
+$is-dark: map-get($theme, is-dark);
+
+$background-color: map-get($ix-deep-mat-blue, 700);
+$background-color-mini-fab: mat-color($accent, 800);
+$header-item-selected: mat-color($primary, default);
+
+@if $is-dark {
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      text-decoration: none;
+      text-align: left;
+
+      @include border-1(false, false, true, false);
+    }
+  }
+
+
+  li {
+    text-decoration: none;
+    text-align: left;
+    @include border-1(false, false, true, false);
+
+    a {
+      display: block; /* Make the links appear below each other instead of side-by-side */
+      text-align: center; /* Center-align text */
+      padding: 16px; /* Add some padding */
+      text-decoration: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      &.sidenav-item-selected {
+        font-weight: 600;
+        color: $header-item-selected;
+
+        .nav-item-content {
+          color: $header-item-selected;
+          ::ng-deep svg rect {
+            fill: $header-item-selected !important;
+          }
+        }
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      .nav-item-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding-left: 3px;
+
+        // icon
+        color: white;
+        ::ng-deep svg rect {
+          fill:  map-get($primary, default-contrast) !important;
+        }
+
+        span {
+          @include transition-all-swift-ease-in-out();
+          text-align: left;
+          width: 85px;
+          padding-left: 16px;
+          opacity: 1;
+          overflow: hidden;
+
+          &.close {
+            //@include transition-all-swift-ease-in-out();
+            opacity: 0;
+            width: 0;
+            padding-left: 0;
+          }
+        }
+
+        &.display-icons-only {
+          @include transition-all-swift-ease-in-out();
+
+          span {
+            @include transition-all-swift-ease-in-out();
+            width: 0;
+            margin: 0;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+
