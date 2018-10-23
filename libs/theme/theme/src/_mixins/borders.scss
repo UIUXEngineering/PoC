@@ -1,0 +1,22 @@
+@import '../theme.palette';
+
+$border-1-color: #3C3C3C;
+
+// @include border-1(true, false, false, false);
+@mixin border-1($top:true, $right:true, $bottom:true, $left: true) {
+  @if($top) {
+    border-top: 1px solid $border-1-color;
+  }
+
+  @if($right) {
+    border-right: 1px solid $border-1-color;
+  }
+
+  @if($bottom) {
+    border-bottom: 1px solid $border-1-color;
+  }
+
+  @if($left) {
+    border-left: 1px solid $border-1-color;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../theme.palette';
+
+// TODO move to menu module
+@mixin menu-theme() {
+
+  background: $background-2-color;
+
+  .mat-card {
+    background: $background-2-color;
+  }
+}

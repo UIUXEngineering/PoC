@@ -1,0 +1,7 @@
+@mixin button-small() {
+  .mat-button {
+    min-width: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

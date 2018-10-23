@@ -1,0 +1,50 @@
+
+@mixin slide-el() {
+  @keyframes slide-in {
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @-webkit-keyframes slide-in {
+    100% {
+      -webkit-transform: translateX(0%);
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0%);
+    }
+    100% {
+      -webkit-transform: translateX(-100%);
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0%);
+    }
+    100% {
+      -webkit-transform: translateX(100%);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '~@angular/material/theming';
+@import './custom-palettes';
+// Define an alternate dark theme.
+
+// Palettes
+$dark-primary-palette: mat-palette($mat-pink);
+$dark-accent-palete:  mat-palette($mat-light-blue, A200, A100, A400);
+$dark-warn-palete:    mat-palette($mat-yellow);
+$custom-background-palette: mat-palette($ix-deep-mat-blue);
+
+// Theme
+$dark-theme:   mat-dark-theme($dark-primary-palette, $dark-accent-palete, $dark-warn-palete);
+
+// Theme objects
+$background: map-get($dark-theme, background);
+$foreground: map-get($dark-theme, foreground);
+
+// Boolean
+$is-dark: map-get($dark-theme, is-dark);
+
+// Colors
+$background-color: mat-color($custom-background-palette, 700);
+$background-mini-fab-color: mat-color($dark-accent-palete, 800);
+$header-item-selected-color: mat-color($dark-primary-palette, default);
+$background-main-color: map-get($ix-deep-blue, 900);
+$background-1-color: map-get($ix-deep-blue, 375);
+$background-2-color: map-get($ix-deep-blue, 425);
+$background-3-color: map-get($ix-deep-blue, 450);
+
+//$dark-theme: replace-background-color($dark-theme, $background-main-color);

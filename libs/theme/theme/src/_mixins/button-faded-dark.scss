@@ -1,0 +1,31 @@
+@import '../theme.palette';
+
+@mixin button-faded-dark() {
+
+  button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: mat-color($dark-accent-palete, 500);
+
+    //:hover {
+    //  color: mat-color($primary);
+    //}
+
+    &.ix-button-faded-dark {
+      color: #ababab;
+      background-color: #1d1d1d;
+      :hover .mat-button-wrapper {
+        color: mat-color($dark-primary-palette);
+        display: inline-block;
+        //width: 84px;
+        //border: 1px solid white;
+        text-align: center;
+      }
+    }
+
+    .btn-text {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+}
