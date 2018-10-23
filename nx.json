@@ -7,5 +7,17 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "d3": {
+      "tags": [
+        "d3"
+      ]
+    },
+    "d3-e2e": {
+      "tags": []
+    },
+    "theme": {
+      "tags": []
+    }
+  }
 }

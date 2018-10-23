@@ -16,6 +16,9 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@poc/theme": [
+        "libs/theme/src/index.ts"
+      ]
     }
   },
   "exclude": [
