@@ -1,0 +1,12 @@
+@import './variables';
+@import './pad';
+@import './pull';
+@import './push';
+@import './size';
+
+@mixin utilities() {
+  @include padding-utilities();
+  @include pulling-utilities();
+  @include pushing-utilities();
+  @include size-utilities();
+}

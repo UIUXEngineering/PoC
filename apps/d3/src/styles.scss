@@ -31,6 +31,7 @@
 @include angular-material-theme($dark-theme);
 
 @include theme-overrides($dark-theme);
+@include utilities();
 
 /* You can add global styles to this file, and also import other style files */
 

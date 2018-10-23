@@ -15,14 +15,17 @@
   >
     <ul>
       <li>
-        <a [routerLink]="['home']"
+        <a [routerLink]="['heatmap-page']"
            routerLinkActive="sidenav-item-selected">
           HeatMap
         </a>
       </li>
     </ul>
   </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="pad-20" >
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
-<div class="pad-20" >
-  <router-outlet></router-outlet>
-</div>

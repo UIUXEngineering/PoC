@@ -3,17 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: 'apps/d3/src/app/pages/home/home-page.module#HomePageModule',
+    path: 'home-page',
+    loadChildren: 'apps/d3/src/app/pages/home-page/home-page.module#HomePageModule',
+  },
+  {
+    path: 'heatmap-page',
+    loadChildren: 'apps/d3/src/app/pages/heatmap-page/heatmap-page.module#HeatmapPageModule',
   },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/home-page',
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/home-page',
     pathMatch: 'full',
   },
 ];
