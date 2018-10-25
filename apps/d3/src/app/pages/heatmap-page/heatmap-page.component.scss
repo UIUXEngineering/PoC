@@ -1,0 +1,27 @@
+::ng-deep .calendar {
+  margin: 20px;
+
+  .month {
+    margin-right: 8px;
+  }
+  .month-name {
+    font-size: 85%;
+    fill: #dcdcdc;
+    font-family: Arial, Helvetica;
+  }
+
+  .day-title {
+    font-size: 75%;
+    fill: #848484;
+    font-family: Arial, Helvetica;
+  }
+
+  .day.hover {
+    stroke: #808183;
+    stroke-width: 2;
+  }
+  .day.focus {
+    stroke: #0c29ff;
+    stroke-width: 2;
+  }
+}
